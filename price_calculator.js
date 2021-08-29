@@ -1,5 +1,7 @@
 function price_calculator(response) {
-  const pizza_price = (response.data[1].quote.USD.price * 10000).toFixed(2);
+  const pizza_price = (response.data.data[1].quote.USD.price * 10000).toFixed(
+    2
+  );
   const pizza_price_dollar = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
